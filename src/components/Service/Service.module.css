@@ -1,0 +1,36 @@
+.containerGlobal{
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 2rem;
+    background-color: #e8eaeb;    
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.containerService {
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 1rem;
+    background-color: #181d31;  
+}
+
+.nameService {
+    font-weight: bold;
+}
+
+.valueService {
+
+}
+
+.imgService {
+
+}
+
+p{
+    text-align: center;
+    margin-bottom: 1rem;
+}

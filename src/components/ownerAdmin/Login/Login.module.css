@@ -1,0 +1,96 @@
+body {
+    overflow: hidden; 
+  }
+
+.mainContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contentLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    background-color: #181d31
+}
+
+.contentLeft img {
+    width: 20rem;
+    height: 20rem;
+    margin: 7rem auto;
+}
+
+.contentLeft h1 {
+    margin: -7rem auto;
+}
+
+.contentLeft p {
+    margin: 7rem auto;
+    color: #fff;       
+}
+
+.contentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12rem auto;
+}
+
+.contentForm h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.inputs {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input {
+    margin-top: .5rem;
+    height: 2rem;
+    width: 26rem;
+    border-radius: .5rem;
+    border: none;
+    padding: .2rem;
+}
+
+.inputs label {
+    color: #fff;
+}
+
+.contentForm p {
+    color: #fff;
+    cursor: pointer;
+}
+
+.contentForm p:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #181d31;
+    color: #fff;
+    border: none;
+    margin: 2rem;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover {
+    scale: 1.1;
+}
+
+
+
+

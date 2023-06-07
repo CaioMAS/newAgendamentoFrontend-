@@ -1,0 +1,54 @@
+.containerDados {
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 2rem;
+    background-color: #e8eaeb;    
+    margin-left: 1rem;
+    margin-right: 1rem;    
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 2rem; 
+}
+
+.containerDados form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerInput {    
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerInput label {
+    padding-bottom: .5rem;
+}
+
+.containerInput input {
+    margin-top: .5rem;
+    height: 2rem;
+    width: 26rem;
+    border-radius: .5rem;
+    border: none;
+    padding: .2rem;
+}
+
+.buttonShedule {
+    background-color: #181d31;
+    color: #fff;
+    border: none;
+    margin: 2rem;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.buttonShedule:hover {
+    scale: 1.1;
+}

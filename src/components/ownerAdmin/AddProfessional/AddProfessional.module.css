@@ -1,0 +1,75 @@
+.mainContent {
+    display: flex;
+    align-items: center;
+    flex-direction: row; 
+    gap: 3rem;
+    justify-content: center;
+    
+    
+}
+
+.cards {    
+    width: 30%;
+    height: 30rem;
+    border-radius: 2rem;
+    background-color: #e8eaeb;
+    display: flex;    
+    flex-direction: column;  
+    padding: 1rem 1rem;  
+    align-items: center;
+}
+
+.cards h3 {
+    text-align: center;
+}
+
+.containerInput {    
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards input {
+    width: 80%;
+    margin-top: .5rem;
+    height: 2rem;
+    width: 26rem;
+    border-radius: .5rem;
+    border: none;
+    padding: .2rem;
+}
+
+.cards select {
+    width: 80%;
+    margin-top: .5rem;
+    height: 2rem;
+    width: 26rem;
+    border-radius: .5rem;
+    border: none;
+    padding: .2rem;
+}
+
+.button {
+    background-color: #181d31;
+    color: #fff;
+    border: none;
+    margin: 2rem;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+    
+}
+
+.button:hover {
+    scale: 1.1;
+}
+
+
+
+
+
+

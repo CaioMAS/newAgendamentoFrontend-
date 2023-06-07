@@ -1,0 +1,33 @@
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  margin: 15rem auto;
+  background-color: #e8eaeb;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card p {
+  color: black;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card-left {
+  background-color: #FFC107;
+}
+
+.card-right {
+  background-color: #4CAF50;
+  color: white;
+}
