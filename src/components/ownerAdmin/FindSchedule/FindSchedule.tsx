@@ -4,6 +4,7 @@ import Footer from "../../Footer/Footer"
 import HeaderInit from "../../HeaderInit/HeaderInit"
 import styles from "./FindSchedule.module.css"
 import axios from "axios"
+import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
 
 interface ISchedule {
   id: string
@@ -33,7 +34,7 @@ const FindSchedule = () => {
 
   return (
     <div>
-      <HeaderInit />
+      <HeaderAdmin/>
       <div className={styles.containerGlobal}>
         <table className={styles.tg}>
           <thead>

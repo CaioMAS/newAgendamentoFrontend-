@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
-import HeaderInit from "../../HeaderInit/HeaderInit"
 import styles from "./FindProfessional.module.css"
 import Footer from "../../Footer/Footer"
 import { useContext, useEffect, useState } from "react"
 import axios from "axios"
 import { ScheduleContext } from "../../../AppContext"
+import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
+
 
 interface IProfessional {
     adminId: string
@@ -22,9 +23,10 @@ interface IProfessionalContext {
 const FindProfessional = () => {
     const [professional, setProfessional] = useState<IProfessional[]>([])
     const { setProfessionalName }: IProfessionalContext = useContext(ScheduleContext)
+    const id = localStorage.getItem("@Auth:user")
 
     const getProfessional = () => {
-        axios.get(`http://localhost:3000/professional/`)
+        axios.get(`http://localhost:3000/admin/${id}`)
             .then(response => setProfessional(response.data))
             .catch(error => console.log(error))
     }
@@ -39,7 +41,7 @@ const FindProfessional = () => {
 
     return (
         <div>
-            <HeaderInit />
+            <HeaderAdmin/>
             <p>Selecione um profissional:</p>
             <div className={styles.containerGlobal}>
                 {professional.map((professional, index) => (

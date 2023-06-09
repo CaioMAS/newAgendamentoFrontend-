@@ -1,9 +1,9 @@
 import { Link, useParams } from "react-router-dom"
 import Footer from "../../Footer/Footer"
-import HeaderInit from "../../HeaderInit/HeaderInit"
 import styles from "./FindDay.module.css"
 import { addDays, format } from "date-fns"
 import { ptBR } from "date-fns/locale"
+import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
 
 const FindDay = () => {
     const {previousProfessionalId} = useParams()
@@ -18,7 +18,7 @@ const FindDay = () => {
     }))
     return (
         <div>
-            <HeaderInit />
+            <HeaderAdmin/>
             <p>Escolha o dia para olhar a agenda: </p>
             <div className={styles.containerGlobal}>
                 {dataAvailable.map((data, index) => (

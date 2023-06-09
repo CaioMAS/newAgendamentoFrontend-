@@ -1,12 +1,12 @@
 import styles from "./HomePageAdmin.module.css"
-import HeaderInit from "../../HeaderInit/HeaderInit"
 import Footer from "../../Footer/Footer"
 import { Link } from "react-router-dom"
+import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
 
 const HomePageAdmin = () => {
     return (
         <div>
-            <HeaderInit />
+            <HeaderAdmin/>
             <div className={styles.mainContent}>
                 <Link to="/findProfessional" className={`${styles.card} ${styles.cardLeft}`}>
                     <div >

@@ -1,12 +1,12 @@
 import Footer from "../../Footer/Footer"
-import HeaderInit from "../../HeaderInit/HeaderInit"
+import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
 import styles from "./AddProfessional.module.css"
 
 
 const AddProfessional = () => {
     return (
         <div>
-            <HeaderInit />
+            <HeaderAdmin/>
             <div className={styles.mainContent}>
                 <div className={styles.cards}>
                     <h3>Adicinar profissional</h3>
@@ -46,7 +46,7 @@ const AddProfessional = () => {
                         <input placeholder="Adicione o valor do serviço" type="number" id="valueService" />
                     </div>
 
-                    <button>Enviar</button>
+                    <button className={styles.button}>Enviar</button>
 
                 </div>
 
