@@ -6,7 +6,6 @@ import axios from "axios"
 import { ScheduleContext } from "../../../AppContext"
 import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
 
-
 interface IProfessional {
     adminId: string
     id: string
@@ -22,11 +21,13 @@ interface IProfessionalContext {
 
 const FindProfessional = () => {
     const [professional, setProfessional] = useState<IProfessional[]>([])
-    const { setProfessionalName }: IProfessionalContext = useContext(ScheduleContext)
+    const { setProfessionalName }: IProfessionalContext =
+        useContext(ScheduleContext)
     const id = localStorage.getItem("@Auth:user")
 
     const getProfessional = () => {
-        axios.get(`http://localhost:3000/admin/${id}`)
+        axios
+            .get(`http://localhost:3000/admin/${id}`)
             .then(response => setProfessional(response.data))
             .catch(error => console.log(error))
     }
@@ -36,12 +37,12 @@ const FindProfessional = () => {
     }
 
     useEffect(() => {
-        getProfessional();
+        getProfessional()
     }, [])
 
     return (
         <div>
-            <HeaderAdmin/>
+            <HeaderAdmin />
             <p>Selecione um profissional:</p>
             <div className={styles.containerGlobal}>
                 {professional.map((professional, index) => (
@@ -52,7 +53,9 @@ const FindProfessional = () => {
                         to={`/findDay/${professional.id}`}
                     >
                         <div>
-                            <p className={styles.nameService}>{professional.professional_name}</p>
+                            <p className={styles.nameService}>
+                                {professional.professional_name}
+                            </p>
                         </div>
                     </Link>
                 ))}

@@ -9,91 +9,101 @@ import HeaderInit from "../HeaderInit/HeaderInit"
 import Footer from "../Footer/Footer"
 
 interface IHourContext {
-  hour: string
-  setHour: string
+    hour: string
+    setHour: string
 }
 
 const Hours = () => {
-  interface Hour {
-    id: string
-    hour: string
-  }
-
-  const generateHours = (startHour: Date, endHour: Date, interval: number): Hour[] => {
-    const hours: Hour[] = []
-    let currentHour = startHour
-
-    while (currentHour <= endHour) {
-      const hourFormatted = format(currentHour, "HH:mm:ss") // Formatar a hora
-      hours.push({
-        id: hourFormatted,
-        hour: format(currentHour, "HH:mm")
-      });
-      currentHour = addMinutes(currentHour, interval)
+    interface Hour {
+        id: string
+        hour: string
     }
 
-    return hours
-  };
+    const generateHours = (
+        startHour: Date,
+        endHour: Date,
+        interval: number,
+    ): Hour[] => {
+        const hours: Hour[] = []
+        let currentHour = startHour
 
-  const { previousProfessionalId, id } = useParams()
+        while (currentHour <= endHour) {
+            const hourFormatted = format(currentHour, "HH:mm:ss") // Formatar a hora
+            hours.push({
+                id: hourFormatted,
+                hour: format(currentHour, "HH:mm"),
+            })
+            currentHour = addMinutes(currentHour, interval)
+        }
 
-  const [occupiedHours, setOccupiedHours] = useState([])
+        return hours
+    }
 
-  const getDateHours = () => {
-    axios
-      .get(`http://localhost:3000/professional/${previousProfessionalId}/${id}`)
-      .then((response) => {
-        // Extrair as horas ocupadas da resposta da requisição
-        const occupiedHours = response.data.map((date: any) => date.time)
-        setOccupiedHours(occupiedHours)
-      })
-      .catch((error) => console.log(error))
-  };
+    const { previousProfessionalId, id } = useParams()
 
-  useEffect(() => {
-    getDateHours()
-  }, [previousProfessionalId, id])
+    const [occupiedHours, setOccupiedHours] = useState([])
 
-  const startHour = new Date()
-  startHour.setHours(8, 0, 0) // Definir a hora de início desejada
-  const endHour = new Date()
-  endHour.setHours(19, 0, 0) // Definir a hora de término desejada
-  const interval = 30 // Definir o intervalo de tempo em minutos
+    const getDateHours = () => {
+        axios
+            .get(
+                `http://localhost:3000/professional/${previousProfessionalId}/${id}`,
+            )
+            .then(response => {
+                // Extrair as horas ocupadas da resposta da requisição
+                const occupiedHours = response.data.map(
+                    (date: any) => date.time,
+                )
+                setOccupiedHours(occupiedHours)
+            })
+            .catch(error => console.log(error))
+    }
 
-  const hours = generateHours(startHour, endHour, interval);
+    useEffect(() => {
+        getDateHours()
+    }, [previousProfessionalId, id])
 
-  // Filtrar as horas disponíveis excluindo as horas ocupadas
-  const availableHours = hours.filter((hour) => !occupiedHours.includes(hour.id))
+    const startHour = new Date()
+    startHour.setHours(8, 0, 0) // Definir a hora de início desejada
+    const endHour = new Date()
+    endHour.setHours(19, 0, 0) // Definir a hora de término desejada
+    const interval = 30 // Definir o intervalo de tempo em minutos
 
-  const {hour, setHour}: IHourContext = useContext(ScheduleContext)
+    const hours = generateHours(startHour, endHour, interval)
 
-  const handleHourClick = (hourClick: string) => {
-    setHour(hourClick)
-  }
+    // Filtrar as horas disponíveis excluindo as horas ocupadas
+    const availableHours = hours.filter(
+        hour => !occupiedHours.includes(hour.id),
+    )
 
-  return (
-    <div>
-      <HeaderInit/>
-      <p>Escolha a hora:</p>
+    const { hour, setHour }: IHourContext = useContext(ScheduleContext)
 
-      <div className={styles.containerGlobal}>
-        {availableHours.map((hour, index) => (
-          <Link
-            onClick={() => handleHourClick(hour.id)}
-            className={styles.containerService}
-            to="/form"
-            key={hour.id}
-            id={hour.id}
-          >
-            <div>
-              <p className={styles.nameService}>{hour.hour}</p>
+    const handleHourClick = (hourClick: string) => {
+        setHour(hourClick)
+    }
+
+    return (
+        <div>
+            <HeaderInit />
+            <p>Escolha a hora:</p>
+
+            <div className={styles.containerGlobal}>
+                {availableHours.map((hour, index) => (
+                    <Link
+                        onClick={() => handleHourClick(hour.id)}
+                        className={styles.containerService}
+                        to="/form"
+                        key={hour.id}
+                        id={hour.id}
+                    >
+                        <div>
+                            <p className={styles.nameService}>{hour.hour}</p>
+                        </div>
+                    </Link>
+                ))}
             </div>
-          </Link>
-        ))}
-      </div>
-      <Footer/>
-    </div>
-  );
-};
+            <Footer />
+        </div>
+    )
+}
 
-export default Hours;
+export default Hours

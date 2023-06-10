@@ -1,4 +1,4 @@
-.containerGlobal{
+.containerGlobal {
     margin: 0 auto;
     width: 80%;
     border-radius: 2rem;
@@ -7,14 +7,14 @@
     display: flex;
     flex-wrap: wrap; /* Adiciona a propriedade flex-wrap para quebrar os elementos quando não houver espaço suficiente */
     justify-content: center;
-    gap: 1rem;    
+    gap: 1rem;
     margin-bottom: 4rem;
 }
 .containerService {
     width: 8.5rem;
     height: 8.5rem;
     border-radius: 1rem;
-    background-color: #181d31; 
+    background-color: #181d31;
 }
 
 .nameService {
@@ -22,14 +22,12 @@
 }
 
 .valueService {
-
 }
 
 .imgService {
-
 }
 
-p{
+p {
     text-align: center;
     margin-bottom: 1rem;
 }

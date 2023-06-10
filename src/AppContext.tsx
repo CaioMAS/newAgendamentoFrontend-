@@ -1,4 +1,10 @@
-import { Dispatch, ReactNode, SetStateAction, createContext, useState } from 'react'
+import {
+    Dispatch,
+    ReactNode,
+    SetStateAction,
+    createContext,
+    useState,
+} from "react"
 
 export const ScheduleContext = createContext({})
 
@@ -6,7 +12,9 @@ interface ScheduleContextProviderProps {
     children: ReactNode
 }
 
-export function ScheduleContextProvider({ children }: ScheduleContextProviderProps) {
+export function ScheduleContextProvider({
+    children,
+}: ScheduleContextProviderProps) {
     const [professionalName, setProfessionalName] = useState<string>()
     const [serviceName, setServiceName] = useState<string>()
     const [day, setDay] = useState<string>()
@@ -28,8 +36,9 @@ export function ScheduleContextProvider({ children }: ScheduleContextProviderPro
                 setDay,
                 setHour,
                 setNameContext,
-                setPhoneContext
-            }}>
+                setPhoneContext,
+            }}
+        >
             {children}
         </ScheduleContext.Provider>
     )

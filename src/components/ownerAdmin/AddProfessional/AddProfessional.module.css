@@ -1,20 +1,19 @@
 .mainContent {
     display: flex;
     align-items: center;
-    flex-direction: row; 
+    flex-direction: row;
     gap: 3rem;
     justify-content: center;
-        
 }
 
-.cards {    
+.cards {
     width: 30%;
     height: 30rem;
     border-radius: 2rem;
     background-color: #e8eaeb;
-    display: flex;    
-    flex-direction: column;  
-    padding: 1rem 1rem;  
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
     align-items: center;
 }
 
@@ -22,27 +21,27 @@
     text-align: center;
 }
 
-.containerInput { 
-    width: 100%;   
+.containerInput {
+    width: 100%;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.cards input {    
-    margin-top: .5rem;
-    height: 2rem;    
-    border-radius: .5rem;
+.cards input {
+    margin-top: 0.5rem;
+    height: 2rem;
+    border-radius: 0.5rem;
     border: none;
-    padding: .2rem;
+    padding: 0.2rem;
 }
 
-.cards select {    
-    margin-top: .5rem;
-    height: 2rem;    
-    border-radius: .5rem;
+.cards select {
+    margin-top: 0.5rem;
+    height: 2rem;
+    border-radius: 0.5rem;
     border: none;
-    padding: .2rem;
+    padding: 0.2rem;
 }
 
 .button {
@@ -56,16 +55,9 @@
     font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
-    transition: .5s;
-    
+    transition: 0.5s;
 }
 
 .button:hover {
     scale: 1.1;
 }
-
-
-
-
-
-

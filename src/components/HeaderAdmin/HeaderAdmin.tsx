@@ -6,17 +6,19 @@ import { useContext } from "react"
 const HeaderAdmin = () => {
     const { signOut } = useContext(AuthContext)
 
-    const handleSingOut = async (e) => {        
+    const handleSingOut = async e => {
         await signOut()
     }
 
-
     return (
         <div className={styles.header}>
-            <a href="./"><img src={logo} alt="Logomarca BarberShop" /></a>
+            <a href="./">
+                <img src={logo} alt="Logomarca BarberShop" />
+            </a>
             <h1>Barber Shop</h1>
-            <button onClick={handleSingOut} className={styles.signOut}>Sair</button>
-
+            <button onClick={handleSingOut} className={styles.signOut}>
+                Sair
+            </button>
         </div>
     )
 }

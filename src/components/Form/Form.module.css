@@ -2,12 +2,12 @@
     margin: 0 auto;
     width: 50%;
     border-radius: 2rem;
-    background-color: #e8eaeb;    
+    background-color: #e8eaeb;
     margin-left: 1rem;
-    margin-right: 1rem;    
+    margin-right: 1rem;
     gap: 1rem;
     margin: 0 auto;
-    padding: 2rem; 
+    padding: 2rem;
 }
 
 .containerDados form {
@@ -16,23 +16,23 @@
     align-items: center;
 }
 
-.containerInput {    
+.containerInput {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
 
 .containerInput label {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 }
 
 .containerInput input {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     height: 2rem;
     width: 26rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border: none;
-    padding: .2rem;
+    padding: 0.2rem;
 }
 
 .buttonShedule {
@@ -46,7 +46,7 @@
     font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .buttonShedule:hover {

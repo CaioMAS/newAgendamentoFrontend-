@@ -1,8 +1,8 @@
-.section {      
+.section {
     width: 50%;
     height: 40rem;
     border-radius: 2rem;
-    background-color: #e8eaeb;  
+    background-color: #e8eaeb;
     margin: 0 auto;
     padding: 2rem;
     justify-content: center;
@@ -11,17 +11,16 @@
     margin-top: 2rem;
 }
 
-.card {    
+.card {
     border-radius: 1rem;
     padding: 1.5rem 8rem;
     margin-bottom: 1rem;
-    display: flex;    
+    display: flex;
     justify-content: center;
     background-color: #181d31;
 }
 
-
 a {
     text-decoration: none;
-    color: #fff;    
+    color: #fff;
 }

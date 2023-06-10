@@ -17,13 +17,15 @@ const Day = () => {
     today.setHours(0, 0, 0, 0) // seta hora, minuto, segundo e milissegundo como zero
     const dataAvailable = Array.from({ length: 15 }).map((_, index) => ({
         data: format(addDays(today, index), "EEEE, dd 'de' MMMM 'de' yyyy", {
-            locale: ptBR
+            locale: ptBR,
         }),
-        id: addDays(today, index).toISOString().replace(/T\d{2}:\d{2}:\d{2}\.\d{3}Z$/, 'T00:00:00.000Z') // adiciona ao ID a hora renderizada
+        id: addDays(today, index)
+            .toISOString()
+            .replace(/T\d{2}:\d{2}:\d{2}\.\d{3}Z$/, "T00:00:00.000Z"), // adiciona ao ID a hora renderizada
     }))
 
-    const location = useLocation();
-    const previousProfessionalId = location.pathname.split("/")[2]; // Obtém o ID do profissional do URL atual
+    const location = useLocation()
+    const previousProfessionalId = location.pathname.split("/")[2] // Obtém o ID do profissional do URL atual
 
     const { day, setDay }: IDayContext = useContext(ScheduleContext)
 
@@ -32,20 +34,30 @@ const Day = () => {
     }
 
     return (
-        <div >
-            <HeaderInit/>
+        <div>
+            <HeaderInit />
             <p>Escolha o dia:</p>
             <div className={styles.containerGlobal}>
-                {dataAvailable.map((data, index) => ( // tenho que receber no link de baixo ID fo professional / ID da data
-                    <Link onClick={() => handleDayClick(data.id)} to={`/hours/${previousProfessionalId}/${data.id}`} key={data.id}>
-                        <div className={styles.containerDay} >
-                            <p className={styles.descriptionDay}>{data.data}</p>
-                            
-                        </div>
-                    </Link>
-                ))}
+                {dataAvailable.map(
+                    (
+                        data,
+                        index, // tenho que receber no link de baixo ID fo professional / ID da data
+                    ) => (
+                        <Link
+                            onClick={() => handleDayClick(data.id)}
+                            to={`/hours/${previousProfessionalId}/${data.id}`}
+                            key={data.id}
+                        >
+                            <div className={styles.containerDay}>
+                                <p className={styles.descriptionDay}>
+                                    {data.data}
+                                </p>
+                            </div>
+                        </Link>
+                    ),
+                )}
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

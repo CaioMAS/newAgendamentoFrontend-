@@ -6,21 +6,25 @@ import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
 const HomePageAdmin = () => {
     return (
         <div>
-            <HeaderAdmin/>
+            <HeaderAdmin />
             <div className={styles.mainContent}>
-                <Link to="/findProfessional" className={`${styles.card} ${styles.cardLeft}`}>
-                    <div >
+                <Link
+                    to="/findProfessional"
+                    className={`${styles.card} ${styles.cardLeft}`}
+                >
+                    <div>
                         <p>Acessar agenda dos profissionais</p>
                     </div>
                 </Link>
 
-                <Link to="/addProfessional" className={`${styles.card} ${styles.cardRight}`}>
+                <Link
+                    to="/addProfessional"
+                    className={`${styles.card} ${styles.cardRight}`}
+                >
                     <div>
                         <p>Cadastrar novo profissional</p>
                     </div>
                 </Link>
-
-
             </div>
             <Footer />
         </div>

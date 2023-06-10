@@ -2,7 +2,7 @@
     margin: 0 auto;
     width: 80%;
     border-radius: 2rem;
-    background-color: #e8eaeb;    
+    background-color: #e8eaeb;
     margin-left: 1rem;
     margin-right: 1rem;
     display: flex;
@@ -16,16 +16,18 @@
     width: 8.5rem;
     height: 10rem;
     border-radius: 1rem;
-    background-color: #181d31;    
+    background-color: #181d31;
 }
 
 .nameService {
     font-weight: bold;
 }
 
-.valueService {}
+.valueService {
+}
 
-.imgService {}
+.imgService {
+}
 
 p {
     text-align: center;
