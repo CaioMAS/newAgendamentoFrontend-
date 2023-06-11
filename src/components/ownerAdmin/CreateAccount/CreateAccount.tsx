@@ -11,7 +11,7 @@ const CreateAccount = () => {
     const [email, setEmail] = useState<string>("")
     const [accountCreated, setAccountCreated] = useState<boolean>(false)
 
-    const handleSaveUser = async e => {
+    const handleSaveUser = async (e) => {
         e.preventDefault()
 
         if (name === "" || password === "" || email === "") {
@@ -67,7 +67,7 @@ const CreateAccount = () => {
                     <div className={styles.inputs}>
                         <label htmlFor="name">Nome:</label>
                         <input
-                            onChange={e => setName(e.target.value)}
+                            onChange={(e) => setName(e.target.value)}
                             type="text"
                             name="name"
                             id="name"
@@ -76,7 +76,7 @@ const CreateAccount = () => {
                     <div className={styles.inputs}>
                         <label htmlFor="email">E-mail:</label>
                         <input
-                            onChange={e => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                             type="email"
                             name="email"
                             id="email"
@@ -85,7 +85,7 @@ const CreateAccount = () => {
                     <div className={styles.inputs}>
                         <label htmlFor="password">Senha:</label>
                         <input
-                            onChange={e => setPassword(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
                             type="password"
                             name="password"
                             id="password"

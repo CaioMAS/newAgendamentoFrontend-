@@ -28,8 +28,8 @@ const FindProfessional = () => {
     const getProfessional = () => {
         axios
             .get(`http://localhost:3000/admin/${id}`)
-            .then(response => setProfessional(response.data))
-            .catch(error => console.log(error))
+            .then((response) => setProfessional(response.data))
+            .catch((error) => console.log(error))
     }
 
     const handleProfessionalClick = (id: string) => {

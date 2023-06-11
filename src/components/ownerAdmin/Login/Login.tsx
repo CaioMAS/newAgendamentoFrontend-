@@ -9,7 +9,7 @@ const Login = () => {
     const [password, setPassword] = useState(null)
     const { signIn, signed } = useContext(AuthContext)
 
-    const handleLogin = async e => {
+    const handleLogin = async (e) => {
         e.preventDefault()
         const data = {
             email,
@@ -35,7 +35,7 @@ const Login = () => {
                     <div className={styles.inputs}>
                         <label htmlFor="email">E-mail:</label>
                         <input
-                            onChange={e => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                             type="email"
                             name="email"
                             id="email"
@@ -45,7 +45,7 @@ const Login = () => {
                     <div className={styles.inputs}>
                         <label htmlFor="password">Senha:</label>
                         <input
-                            onChange={e => setPassword(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
                             type="password"
                             name="password"
                             id="password"

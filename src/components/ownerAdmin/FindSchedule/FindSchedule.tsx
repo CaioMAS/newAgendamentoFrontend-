@@ -28,8 +28,8 @@ const FindSchedule = () => {
             .get(
                 `http://localhost:3000/professional/${previousProfessionalId}/${date}`,
             )
-            .then(response => setSchedule(response.data))
-            .catch(error => console.log(error))
+            .then((response) => setSchedule(response.data))
+            .catch((error) => console.log(error))
     }
 
     useEffect(() => {

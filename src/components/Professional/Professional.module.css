@@ -1,15 +1,14 @@
-.containerGlobal {
-    margin: 0 auto;
+.containerGlobal {    
+    margin-bottom: 2rem;   
     width: 80%;
     border-radius: 2rem;
-    background-color: #e8eaeb;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    background-color: #e8eaeb;    
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem;    
+    flex-wrap: wrap;     
 }
 
 .containerService {

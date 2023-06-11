@@ -48,14 +48,14 @@ const Hours = () => {
             .get(
                 `http://localhost:3000/professional/${previousProfessionalId}/${id}`,
             )
-            .then(response => {
+            .then((response) => {
                 // Extrair as horas ocupadas da resposta da requisição
                 const occupiedHours = response.data.map(
                     (date: any) => date.time,
                 )
                 setOccupiedHours(occupiedHours)
             })
-            .catch(error => console.log(error))
+            .catch((error) => console.log(error))
     }
 
     useEffect(() => {
@@ -72,7 +72,7 @@ const Hours = () => {
 
     // Filtrar as horas disponíveis excluindo as horas ocupadas
     const availableHours = hours.filter(
-        hour => !occupiedHours.includes(hour.id),
+        (hour) => !occupiedHours.includes(hour.id),
     )
 
     const { hour, setHour }: IHourContext = useContext(ScheduleContext)

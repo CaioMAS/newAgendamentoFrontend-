@@ -120,7 +120,7 @@ const Form = () => {
                         <input
                             placeholder="Seu nome e sobrenome"
                             id="name"
-                            onChange={e => setName(e.target.value)}
+                            onChange={(e) => setName(e.target.value)}
                             type="text"
                         />
                     </div>
@@ -128,7 +128,7 @@ const Form = () => {
                         <label htmlFor="phone">Telefone: </label>
                         <input
                             id="phone"
-                            onChange={e => setPhone(e.target.value)}
+                            onChange={(e) => setPhone(e.target.value)}
                             onBlur={handlePhoneBlur}
                             type="text"
                             placeholder="(00) 00000-0000"

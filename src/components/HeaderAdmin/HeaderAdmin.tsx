@@ -6,7 +6,7 @@ import { useContext } from "react"
 const HeaderAdmin = () => {
     const { signOut } = useContext(AuthContext)
 
-    const handleSingOut = async e => {
+    const handleSingOut = async (e) => {
         await signOut()
     }
 

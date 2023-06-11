@@ -32,8 +32,8 @@ const Service = () => {
             .get(
                 `http://localhost:3000/professional/${previousProfessionalId}/services`,
             )
-            .then(response => setServices(response.data))
-            .catch(error => console.log(error))
+            .then((response) => setServices(response.data))
+            .catch((error) => console.log(error))
     }
 
     const handleServiceClick = (name: string) => {

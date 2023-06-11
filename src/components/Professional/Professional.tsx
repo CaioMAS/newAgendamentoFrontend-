@@ -28,8 +28,8 @@ const Professional = () => {
     const getProfessional = () => {
         axios
             .get(`http://localhost:3000/professional/`)
-            .then(response => setProfessional(response.data))
-            .catch(error => console.log(error))
+            .then((response) => setProfessional(response.data))
+            .catch((error) => console.log(error))
     }
 
     const handleProfessionalClick = (name: string) => {
