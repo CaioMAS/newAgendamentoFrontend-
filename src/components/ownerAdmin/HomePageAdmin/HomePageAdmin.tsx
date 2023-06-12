@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 import HeaderAdmin from "../../HeaderAdmin/HeaderAdmin"
 
 const HomePageAdmin = () => {
+    const id = localStorage.getItem("@Auth:user")
+    console.log(id)
     return (
         <div>
             <HeaderAdmin />
@@ -25,7 +27,12 @@ const HomePageAdmin = () => {
                         <p>Cadastrar novo profissional</p>
                     </div>
                 </Link>
+                <div className={`${styles.card} ${styles.cardRight}`}>
+                    <p>O link da sua barbearia é:</p>
+                    <p>{`http://localhost:5173/${id}`}</p>
+                </div>
             </div>
+
             <Footer />
         </div>
     )

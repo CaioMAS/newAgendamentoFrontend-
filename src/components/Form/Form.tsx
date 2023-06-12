@@ -45,7 +45,7 @@ const Form = () => {
                 data,
             )
             console.log(response.data)
-            navigate("/") // Redireciona para a rota principal ("/") após o agendamento ser feito com sucesso
+            //navigate(`/`) // Redireciona para a rota principal ("/") após o agendamento ser feito com sucesso
         } catch (error) {
             console.log(error)
         }

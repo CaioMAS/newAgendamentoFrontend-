@@ -5,7 +5,7 @@ import styles from "./HeaderInit.module.css"
 const HeaderInit = () => {
     return (
         <div className={styles.header}>
-            <a href="./">
+            <a href="">
                 <img src={logo} alt="Logomarca BarberShop" />
             </a>
             <h1>Barber Shop</h1>

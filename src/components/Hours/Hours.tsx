@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer"
 
 interface IHourContext {
     hour: string
-    setHour: string
+    setHour: (hour: string) => void
 }
 
 const Hours = () => {
@@ -41,7 +41,7 @@ const Hours = () => {
 
     const { previousProfessionalId, id } = useParams()
 
-    const [occupiedHours, setOccupiedHours] = useState([])
+    const [occupiedHours, setOccupiedHours] = useState<string[]>([])
 
     const getDateHours = () => {
         axios

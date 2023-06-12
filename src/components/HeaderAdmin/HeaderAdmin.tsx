@@ -12,7 +12,7 @@ const HeaderAdmin = () => {
 
     return (
         <div className={styles.header}>
-            <a href="./">
+            <a href="">
                 <img src={logo} alt="Logomarca BarberShop" />
             </a>
             <h1>Barber Shop</h1>

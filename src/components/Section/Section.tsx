@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import styles from "./Section.module.css"
 
 const Section = () => {
+    const {idBarberShop} = useParams()
     return (
         <div className={styles.section}>
-            <Link to="/professional">
+            <Link to={`/professional/${idBarberShop}`}>
                 <div className={styles.card}>
                     <h2>Agende seu horário</h2>
                 </div>

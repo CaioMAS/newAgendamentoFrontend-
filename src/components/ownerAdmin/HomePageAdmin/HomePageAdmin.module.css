@@ -1,11 +1,15 @@
-.mainContent {
+.mainContent {     
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 2rem;
+    margin: 3rem auto;
+
 }
 
 .card {
     width: 30%;
-    margin: 15rem auto;
+    margin: 0 auto;
     background-color: #e8eaeb;
     border-radius: 10px;
     padding: 20px;

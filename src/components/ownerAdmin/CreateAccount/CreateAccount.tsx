@@ -48,7 +48,7 @@ const CreateAccount = () => {
     if (accountCreated) {
         return (
             <>
-                <Navigate to="/login" />
+                <Navigate to="/" />
             </>
         )
     }
@@ -65,7 +65,7 @@ const CreateAccount = () => {
                 <h2>Criar conta</h2>
                 <form onSubmit={handleSaveUser}>
                     <div className={styles.inputs}>
-                        <label htmlFor="name">Nome:</label>
+                        <label htmlFor="name">Nome da barbearia:</label>
                         <input
                             onChange={(e) => setName(e.target.value)}
                             type="text"

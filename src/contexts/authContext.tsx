@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
     const signOut = () => {
         localStorage.clear()
         setUser(null)
-        return <Navigate to="/login" />
+        return <Navigate to="/" />
     }
 
     return (

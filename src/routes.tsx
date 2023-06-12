@@ -18,8 +18,8 @@ import { PrivateRoutes } from "./privateRoutes.tsx"
 export function Routers() {
     return (
         <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/professional" element={<Professional />} />
+            <Route path="/:idBarberShop" element={<App />} />
+            <Route path="/professional/:idBarberShop" element={<Professional  />} />
             <Route
                 path="/service/:previousProfessionalId"
                 element={<Service />}
@@ -30,7 +30,7 @@ export function Routers() {
                 element={<Hours />}
             />
             <Route path="/form" element={<Form />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/homePageAdmin" element={<PrivateRoutes />}>
                 <Route path="/homePageAdmin" element={<HomePageAdmin />} />
             </Route>

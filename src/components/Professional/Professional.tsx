@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import styles from "./Professional.module.css"
 import { useContext, useEffect, useState } from "react"
 import axios from "../../../node_modules/axios/index"
@@ -21,13 +21,15 @@ interface IProfessionalContext {
 }
 
 const Professional = () => {
+    const { idBarberShop } = useParams()
     const [professional, setProfessional] = useState<IProfessional[]>([])
     const { professionalName, setProfessionalName }: IProfessionalContext =
         useContext(ScheduleContext)
 
+        console.log(idBarberShop)
     const getProfessional = () => {
         axios
-            .get(`http://localhost:3000/professional/`)
+            .get(`http://localhost:3000/admin/${idBarberShop}`)
             .then((response) => setProfessional(response.data))
             .catch((error) => console.log(error))
     }
